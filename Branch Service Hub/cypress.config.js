@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
-const webpackPreprocessor = require('@cypress/webpack-preprocessor')
+const webpackPreprocessor = require('@cypress/webpack-preprocessor');
+
 
 module.exports = defineConfig({
   e2e: {
@@ -14,7 +15,7 @@ module.exports = defineConfig({
       "openMode": 0
      },
     setupNodeEvents(on, config) {
-      
+  
     },
     
   },
