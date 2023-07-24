@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-07-16T10:28:19.368Z",
+    "end": "2023-07-16T10:28:56.054Z",
+    "duration": 36686,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2b268115-93da-40e2-906a-a239aaf5c186",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21fb6a76-c971-4d84-894d-53c006d90175",
+          "title": "All log in tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login test 1",
+              "fullTitle": "All log in tests login test 1",
+              "timedOut": null,
+              "duration": 14655,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://opensource-demo.orangehrmlive.com\");\nloginpage.enterUsername(\"Admin\");\nloginpage.emterPassword(\"admin123\");\nloginpage.clicklogin();\nloginpage.clickprofile();",
+              "err": {},
+              "uuid": "8f06873e-c715-4646-8c4f-e4168a6e6eff",
+              "parentUUID": "21fb6a76-c971-4d84-894d-53c006d90175",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "login test 2",
+              "fullTitle": "All log in tests login test 2",
+              "timedOut": null,
+              "duration": 16817,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://opensource-demo.orangehrmlive.com\");\nloginpage.enterUsername(\"Admin2\");\nloginpage.emterPassword(\"admin123\");\nloginpage.clicklogin();\nloginpage.clickprofile();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.oxd-userdropdown-img`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.oxd-userdropdown-img`, but never found it.\n    at Loginpage.clickprofile (webpack:///./cypress/e2e/pages/login.js:22:11)\n    at Context.eval (webpack:///./cypress/e2e/login.cy.js:23:18)",
+                "diff": null
+              },
+              "uuid": "08caa6ba-8985-42dc-be54-4aee3d830545",
+              "parentUUID": "21fb6a76-c971-4d84-894d-53c006d90175",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8f06873e-c715-4646-8c4f-e4168a6e6eff"
+          ],
+          "failures": [
+            "08caa6ba-8985-42dc-be54-4aee3d830545"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 31472,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

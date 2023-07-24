@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-07-16T10:18:07.986Z",
+    "end": "2023-07-16T10:18:26.953Z",
+    "duration": 18967,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e407b51e-0fe4-43c2-b353-07451f619981",
+      "title": "",
+      "fullFile": "cypress\\e2e\\fileupload.cy.js",
+      "file": "cypress\\e2e\\fileupload.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "File upload",
+          "fullTitle": "File upload",
+          "timedOut": null,
+          "duration": 5742,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit(\"https://trytestingthis.netlify.app\");\ncy.get('#myfile').attachFile(\"example.json\");",
+          "err": {},
+          "uuid": "4da6bd85-1d88-430b-b944-1824ca73775b",
+          "parentUUID": "e407b51e-0fe4-43c2-b353-07451f619981",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "file download test",
+          "fullTitle": "file download test",
+          "timedOut": null,
+          "duration": 2343,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.downloadFile('https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg', 'mydownloads', 'demo.jpg');",
+          "err": {},
+          "uuid": "d69a64d8-d8ef-414a-b5a5-1f70d9570b75",
+          "parentUUID": "e407b51e-0fe4-43c2-b353-07451f619981",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "4da6bd85-1d88-430b-b944-1824ca73775b",
+        "d69a64d8-d8ef-414a-b5a5-1f70d9570b75"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 8085,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
