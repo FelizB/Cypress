@@ -6,7 +6,7 @@ module.exports = defineConfig({
   e2e: {
     watchForFileChanges: false,
     chromeWebSecurity:false,
-    experimentalModifyObstructiveThirdPartyCode: true,
+    experimentalOriginDependencies:true,
     experimentalSessionAndOrigin:true,
     experimentalStudio:true,
     experimentalModifyObstructiveThirdPartyCode:true,
