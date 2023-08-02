@@ -1,39 +1,17 @@
 /// <reference types="cypress" />
+import Auth from "../../components/Auth";
 
-describe('Log In',() => { 
-    it("language selection",()=>{
-        cy.session("start session",()=>{
-            cy.visit("https://servicehub-admin-portal-uat.equitygroupholdings.com/login/login?returnUrl=https:%2F%2Fservicehub-customer-360-uat.equitygroupholdings.com%2Fservices&lang=en-GB&reauth=0") 
-            cy.get('.mat-form-field-infix')
-                .click()
-            
-            cy.get('#mat-option-1 > .mat-option-text')
-                .should("contain","English, KE")
-                .click()
-            cy.wait(500)
-            cy.contains('Confirm')
-                .should("contain","Confirm")
-                .click()
-            cy.wait(500)
-        
-            cy.get('.login-container-md > .mat-focus-indicator')
-                .should("contain","Sign in with Microsoft")
-                .click()
-                .debug()
-
-            cy.wait(500)
-            cy.get("#i0116").type(Cypress.env('USERNAME')) 
-            cy.get("#idSIButton9").click() 
-            cy.get("#i0118").type(Cypress.env("PASSWORD")) 
-            cy.get("#idSIButton9").click() 
-         
-            cy.wait(500)
-            cy.get("#signInAnotherWay")
-                .click()
-        
-        
-    })
-   
-})
-    
-})
+describe("Log In", { viewportHeight: 1080, viewportWidth: 1920 }, () => {
+  it("Start Log in here", () => {
+    cy.session("start session", () => {
+      Auth.LinkUrl();
+      Auth.LanguageSelection();
+      Auth.MicrosoftAuth();
+      cy.wait(20000);
+      Auth.LanguageSelection();
+      cy.wait(4000);
+      Auth.DashRedirect();
+      cy.wait(60000);
+    });
+  });
+});
