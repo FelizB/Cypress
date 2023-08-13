@@ -6,6 +6,7 @@ describe("Log In", { viewportHeight: 1080, viewportWidth: 1920 }, () => {
     cy.session("start session", () => {
       Auth.LinkUrl();
       Auth.LanguageSelection();
+
       Auth.MicrosoftAuth();
       cy.wait(20000);
       Auth.LanguageSelection();

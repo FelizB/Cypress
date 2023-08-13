@@ -6,11 +6,7 @@ describe("testing file", () => {
   it("passes", () => {
     cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/");
 
-    /*cy.get(".search-keyword").type("ca");
-    cy.wait(2000);
-    cy.get(".search-button").click();
-
-    cy.get(".product:visible").should("have.length", 4);*/
+    //cy.get(".product:visible").should("have.length", 4);
     cy.wait(2000);
     cy.get(".products")
       .find(".product")
@@ -23,5 +19,20 @@ describe("testing file", () => {
           .contains("ADD TO CART")
           .click();
       });
+    cy.get(".search-keyword").type("ca");
+    cy.wait(2000);
+
+    cy.get(".products")
+      .find(".product")
+      .each(($el, index, $list) => {
+        const item = $el.find("h4.product-name").text();
+        if (item.includes("Cashews")) {
+          cy.wrap($el).contains("ADD TO CART").click();
+        }
+      });
+
+    cy.get(".search-button").click();
+    //handling pop ups
+    //cy.get('[value="confirm"]').click();
   });
 });
